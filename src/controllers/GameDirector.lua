@@ -3,7 +3,11 @@ local CameraController = require "controllers.CameraController"
 local DataPersistence = require "controllers.DataPersistence"
 
 -- Models
+local TextBox = require "models.business.TextBox"
 local World = require "models.business.World"
+
+-- Entities
+local Player = require "models.entities.Player"
 
 -- Game UI
 local Button = require "util.ui.Button"
@@ -12,6 +16,7 @@ local ButtonManager = require "util.ui.ButtonManager"
 -- Libraries
 local Pixelurite = require "libs.Pixelurite"
 local MoonJohn = require "libs.MoonJohn"
+local Scribe = require "libs.scribe.Scribe"
 
 local GameDirector = {}
 
@@ -20,14 +25,14 @@ GameDirector.__index = GameDirector
 function GameDirector:new()
     local world = World:new()
     local this = {
-        world = world,
+        world = world, player = Player:new(world.world),
         levelData = nil,
         dataPersistence = DataPersistence:new(),
         --Libraries
         libraries = {
             ButtonManager = ButtonManager, Button = Button, Pixelurite = Pixelurite,
             CameraController = CameraController, DataPersistence = DataPersistence,
-            MoonJohn = MoonJohn
+            MoonJohn = MoonJohn, TextBox = TextBox, Scribe = Scribe
         },
         fonts = {
             default = love.graphics.getFont(),
@@ -59,6 +64,10 @@ function GameDirector:getEntityByFixture(fixture)
     if fixture:getUserData() == "Player" then
         return self.characterController
     end
+end
+
+function GameDirector:getPlayer()
+    return self.player
 end
 
 function GameDirector:getFonts()

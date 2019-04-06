@@ -10,3 +10,6 @@
 [submodule "src/libs/bitser"]
 	path = src/libs/bitser
 	url = https://github.com/gvx/bitser
+[submodule "src/libs/scribe"]
+	path = src/libs/scribe
+	url = https://github.com/smallsco/scribe

@@ -1,28 +1,34 @@
 local TextBox = {}; TextBox.__index = TextBox
 
-function callback(self)
-    return function(x, y, button, op, param)
-        if self.index <= #self.texts then
-            self.index = self.index + 1
-            self:textbox:setText(self.texts[self.index])
-        end
+function TextBox:new(texts, Scribe, parent)
+    local this = setmetatable({
+        texts = texts, index = 1, font = love.graphics.getFont(),
+        scribeParameters = {
+            text = texts[1],
+            x = 10,
+            color = {1, 1, 1}
+        }, parent = parent
+    }, TextBox)
+    this.scribeParameters.y = (love.graphics.getHeight() - (this.font:getHeight() * 4 ) - 10) - (10 * 2)
+    this.scribeParameters.w = love.graphics.getWidth() - 10 - 10
+    this.scribeParameters.h = (this.font:getHeight() * 4) + ( 10 * 2 )
+    this.textbox = Scribe(this.scribeParameters)
+    return this
+end
+
+function TextBox:changeText()
+    if self.index < #self.texts then
+        self.index = self.index + 1
+        self.textbox:setText(self.texts[self.index])
+    else
+        self.parent:deleteTextBox()
     end
 end
 
-function TextBox:new(texts, Scribe)
-    local this = setmetatable({
-        texts = texts, index = 1, font = love.graphics.getFont()
-    }, TextBox)
-    this.textbox = Scribe({
-        text = texts[1],
-        y = (love.graphics.getHeight() - ( this.font:getHeight() * 4 ) - 10 ) - ( 10 * 2 )
-        w = love.graphics.getWidth() - 10 - 10,
-        h = ( this.font:getHeight() * 4 ) + ( 10 * 2 ),
-        x = 10,
-        color = { 255, 255, 255 },
-        click_callback = callback(this)
-    })
-    return this
+function TextBox:keypressed(key, scancode, isrepeat)
+    if key == "space" then
+        self:changeText()
+    end
 end
 
 function TextBox:update(dt)
@@ -33,8 +39,8 @@ function TextBox:draw()
     self.textbox:draw()
 end
 
-function TextBox:mousepressed( x, y, b )
-	self.textbox:mousepressed( x, y, b )
+function TextBox:mousepressed(x, y, button)
+    self:changeText()
 end
 
 return TextBox

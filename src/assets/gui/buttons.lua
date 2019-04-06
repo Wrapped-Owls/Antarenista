@@ -1,94 +1,95 @@
 return {
+	meta = {
+		scale = "1",
+		image = "buttons.png",
+		size = {
+			w = 202,
+			h = 328,
+		},
+		version = "1.0",
+		app = "http://www.codeandweb.com/texturepacker",
+		format = "RGBA8888",
+	},
 	frames = {
-		pressed = {
-			sourceSize = {
-				h = 44,
-				w = 90,
-			},
-			frame = {
-				h = 44,
-				w = 90,
-				x = 0,
-				y = 44,
-			},
-			rotated = false,
-			spriteSourceSize = {
-				h = 44,
-				w = 90,
-				x = 0,
-				y = 0,
-			},
-			trimmed = false,
-		},
 		disabled = {
-			sourceSize = {
-				h = 44,
-				w = 90,
-			},
-			frame = {
-				h = 44,
-				w = 90,
-				x = 0,
-				y = 132,
-			},
 			rotated = false,
 			spriteSourceSize = {
-				h = 44,
-				w = 90,
-				x = 0,
 				y = 0,
-			},
-			trimmed = false,
-		},
-		normal = {
-			sourceSize = {
-				h = 44,
-				w = 90,
+				x = 0,
+				w = 200,
+				h = 80,
 			},
 			frame = {
-				h = 44,
-				w = 90,
-				x = 0,
-				y = 0,
-			},
-			rotated = false,
-			spriteSourceSize = {
-				h = 44,
-				w = 90,
-				x = 0,
-				y = 0,
+				y = 247,
+				x = 1,
+				w = 200,
+				h = 80,
 			},
 			trimmed = false,
+			sourceSize = {
+				w = 200,
+				h = 80,
+			},
 		},
 		hover = {
-			sourceSize = {
-				h = 44,
-				w = 90,
-			},
-			frame = {
-				h = 44,
-				w = 90,
-				x = 0,
-				y = 88,
-			},
 			rotated = false,
 			spriteSourceSize = {
-				h = 44,
-				w = 90,
-				x = 0,
 				y = 0,
+				x = 0,
+				w = 200,
+				h = 80,
+			},
+			frame = {
+				y = 83,
+				x = 1,
+				w = 200,
+				h = 80,
 			},
 			trimmed = false,
+			sourceSize = {
+				w = 200,
+				h = 80,
+			},
 		},
-	},
-	meta = {
-		size = {
-			h = 176,
-			w = 90,
+		normal = {
+			rotated = false,
+			spriteSourceSize = {
+				y = 0,
+				x = 0,
+				w = 200,
+				h = 80,
+			},
+			frame = {
+				y = 1,
+				x = 1,
+				w = 200,
+				h = 80,
+			},
+			trimmed = false,
+			sourceSize = {
+				w = 200,
+				h = 80,
+			},
 		},
-		format = "RGBA8888",
-		image = "buttons.png",
-		app = "https://github.com/piskelapp/piskel/",
-		version = "1.0",
+		pressed = {
+			rotated = false,
+			spriteSourceSize = {
+				y = 0,
+				x = 0,
+				w = 200,
+				h = 80,
+			},
+			frame = {
+				y = 165,
+				x = 1,
+				w = 200,
+				h = 80,
+			},
+			trimmed = false,
+			sourceSize = {
+				w = 200,
+				h = 80,
+			},
+		},
 	},
 }

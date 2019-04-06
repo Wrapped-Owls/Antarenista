@@ -5,13 +5,15 @@ function CreditsScene:new()
     local this = {
         variableNames = {
             mechanics = "Programadores", gameDesign = "Game Designers", script = "Roteiro",
-            graphicalDesigners = "Designers Gráfico", levelDesign = "Designers de Fase"
+            graphicalDesigners = "Designers Gráfico", levelDesign = "Designers de Fase",
+            soundDesign = "Designers de Som"
     },
         mechanics = {"Jictyvoo - João Victor Oliveira Couto"},
         script = {"Scarllett Lins", "João Victor Oliveira Couto"},
         gameDesign = {"João Victor Oliveira Couto", "Lucas Silva Lima", "Scarllett Lins", "Ananias Correia do Nascimento"},
-        graphicalDesigners = {"Lucas Silva Lima", "Scarllett Lins"},
-        levelDesign = {"João Victor Oliveira Couto", "Lucas Silva Lima", "Scarllett Lins", "Ananias Correia do Nascimento"},
+        graphicalDesigners = {"Lucas Silva Lima", "Lokisley Oliveira"},
+        levelDesign = {"Lucas Silva Lima", "Scarllett Lins"},
+        soundDesign = {"Ananias Correia do Nascimento"},
         companyImage = love.graphics.newImage("assets/company_logo.png"),
         y = love.graphics.getHeight(),
         elapsedTime = 0,

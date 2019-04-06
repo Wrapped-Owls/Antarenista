@@ -1,17 +1,23 @@
 # PEPT
+
 Transtorno de Estresse Pós-Traumático
  
-## Conceito: trabalhar sobre a história e os feitos do transtorno pós traumático na vida de um militar, após a realização de dois eventos em sua vida.
+## Conceito
+
+trabalhar sobre a história e os feitos do transtorno pós traumático na vida de um militar, após a realização de dois eventos em sua vida.
 
 ## Como funciona
+
 O jogo tem uma história linear, onde o jogador descobre aos poucos que momento da vida sua personagem está vivendo, desde acontecimentos recentes até suas consequências, enquanto passa por todos os estágios do luto junto aos sintomas do Transtorno Pós-Traumático, numa jornada de autodescoberta aceitação e tomada de decisões. 
 
 ## Jogabilidade
+
 * Pequenas cutscenes narrando eventos do jogo
 * Interação da personagem com alguns objetos do cenário com seta para cima e espaço
 * Movimentação com setas para direita e esquerda
 
 ## Fases do Jogo (Luto)
+
 * Negação - Momento marcado pela dificuldade em acreditar que o fato realmente aconteceu. A dor é intensa e existe uma grande dificuldade para lidar com a perspectiva de um futuro sem a pessoa.
 
 * Raiva - Ao perceber que o fato realmente aconteceu e não existe nada que possa ser feito a respeito, é comum sentir uma revolta muito grande. Nesse período, a pessoa percebe que não é possível reverter a situação, e tendência é que a dificuldade em se conformar seja canalizada em raiva.
@@ -23,6 +29,7 @@ O jogo tem uma história linear, onde o jogador descobre aos poucos que momento 
 * Aceitação - Durante essa fase a pessoa consegue ter uma visão mais realista e passa aceitar o fato. O desespero em relação a perda dá lugar para uma maior serenidade, e o indivíduo começa a enfrentar a saudade com mais consciência.
 
 # Agravantes (Sintomas)
+
 * Reexperiência traumática: pensamentos recorrentes e intrusivos que remetem à lembrança do trauma, flashbacks, pesadelos
 * Esquiva e isolamento social: a pessoa foge de situações, contatos e atividades que possam reavivar as lembranças dolorosas do trauma
 * Hiperexcitabilidade psíquica e psicomotora: taquicardia, sudorese, tonturas, dor de cabeça, distúrbios do sono, dificuldade de concentração, irritabilidade, hipervigilância
