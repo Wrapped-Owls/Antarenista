@@ -8,7 +8,8 @@ function GameController:new()
         background = love.graphics.newImage("assets/sprites/ShootingUFOs/background.png"),
         cross_hair = love.graphics.newImage("assets/sprites/ShootingUFOs/cross-hair.png"),
         ufoSprite = gameDirector:getLibrary("Pixelurite").configureSpriteSheet("UFOs", "assets/sprites/ShootingUFOs/", true, nil, 1, 1, true),
-        elapsedTime = 0, crossPosition = {x = -400, y = -300}, score = 0
+        elapsedTime = 0, crossPosition = {x = -400, y = -300}, score = 0,
+        music = love.audio.newSource("assets/sounds/Electronic.wav", "static")
     }, GameController)
     this.ufo = UFO:new(this.ufoSprite)
     return this
@@ -25,10 +26,12 @@ function GameController:keypressed(key, scancode, isrepeat)
         end
     elseif key == "escape" and self.score >= 10 then
         sceneDirector:previousScene()
+        self.music:pause()
     end
 end
 
 function GameController:update(dt)
+    self.music:play()
     self.elapsedTime = self.elapsedTime + dt
     if self.elapsedTime >= 0.02 then
         self.elapsedTime = 0

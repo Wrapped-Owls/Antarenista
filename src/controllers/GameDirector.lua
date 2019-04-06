@@ -25,7 +25,7 @@ GameDirector.__index = GameDirector
 function GameDirector:new()
     local world = World:new()
     local this = {
-        world = world, player = Player:new(world.world),
+        world = world, player = Player:new(world.world, Pixelurite),
         levelData = nil,
         dataPersistence = DataPersistence:new(),
         --Libraries
