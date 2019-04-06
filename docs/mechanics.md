@@ -1,0 +1,5 @@
+# Mecânicas do jogo
+
+## Mecânicas
+
+* 
